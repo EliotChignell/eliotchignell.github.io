@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: center;
+    display: block;
+    width: 50%;
+    background-color: black;
+    font-family: 'Roboto Mono', monospace;
 }
