@@ -7,3 +7,8 @@ body {
     background-color: black;
     font-family: 'Roboto Mono', monospace;
 }
+
+a {
+    text-decoration: none;
+    color: deepskyblue;
+}
