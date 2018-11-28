@@ -1,2 +1,2 @@
-# EliotChignell.github.io
+# eliotchignell.github.io
 The website for Eliot H.S. Chignell
