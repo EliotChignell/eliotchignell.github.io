@@ -1,40 +1,102 @@
+@font-face {
+    src: url("./fonts/Syne-Regular.ttf");
+    font-family: "Syne-Regular";
+}
 
 @font-face {
-    font-family: SFCompactDisplay;
-    src: url("./assets/fonts/SFCompactDisplay-Medium.otf") format("opentype");
+    src: url("./fonts/Syne-SemiBold.ttf");
+    font-family: "Syne-SemiBold";
+}
+
+@font-face {
+    src: url("./fonts/Syne-Bold.ttf");
+    font-family: "Syne-Bold";
+}
+
+@font-face {
+    src: url("./fonts/Poppins-Bold.ttf");
+    font-family: "Poppins-Bold";
+}
+
+@font-face {
+    src: url("./fonts/SFCompactDisplay-Medium.ttf");
+    font-family: "SFCompactDisplay";
 }
 
 body {
-    text-align: center;
-    display: block;
-    width: 50%;
-    background-color: black;
-    font-family: SFCompactDisplay, 'Arial';
-    color: white;
+    font-family: "Syne-Regular";
 }
 
-.mainContainer {
-    width: 75%;
-    height: 100%;
+p {
+    font-size: 17px;
+}
 
-    position:absolute;
-    left:0; right:0;
-    top:0; bottom:0;
-    margin:auto;
+h1 {
+    border-bottom: 5px solid black;
+    border-radius: 5px;
+    font-family: "Syne-Bold";
+    text-align: left;
+    font-size: 35px;
+    padding-left: 15px;
+    /*background: rgb(241,115,115);
+background: linear-gradient(42deg, rgba(241,115,115,1) 27%, rgba(251,194,71,1) 100%);
+background: rgb(255,55,55);
+background: linear-gradient(42deg, rgba(255,55,55,1) 22%, rgba(249,166,42,1) 100%);*/
+background: rgb(255,130,130);
+background: linear-gradient(86deg, rgba(255,130,130,1) 22%, rgba(255,206,134,1) 100%);
+}
 
-    max-width:100%;
-    max-height:100%;
-    overflow:auto;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+h2 {
+    font-family: "Syne-SemiBold";
+    font-size: 30px;
 }
 
 a {
     text-decoration: none;
-    color: deepskyblue;
+    color: black;
+    border: 5px solid black;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    background: rgb(241,115,115);
+background: linear-gradient(20deg, rgba(241,115,115,1) 27%, rgba(251,194,71,1) 100%);
 }
 
-.shr {
-    width: 75%;
-    text-align: center;
+a:hover {
+}
+
+#project-title-nbabot {
+    font-family: "Poppins-Bold" !important;
+    font-size: 30px;
+    border-top: 5px solid #ED4245;
+    border-bottom: 5px solid #5865F2;
+    border-radius: 5px;
+    display: inline;
+}
+
+#project-title-formum {
+    font-family: "SFCompactDisplay";
+    background-color: #87CEFA;
+    display: inline;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#project-title-nflbot {
+    border-radius: 5px;
+}
+
+.content {
+    margin-left: 3vw;
+}
+
+.project {
+    margin-left: 5vw;
+    border-left: 5px solid black;
+    border-radius: 5px;
+    padding-left: 8px;
+}
+
+.header {
 }
