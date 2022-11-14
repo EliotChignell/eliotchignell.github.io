@@ -69,7 +69,9 @@ h2 {
 background: linear-gradient(20deg, rgba(241,115,115,1) 27%, rgba(251,194,71,1) 100%);*/
 }
 
-a:hover {
+.button:hover {
+    background: rgb(208, 54, 54);
+    background: linear-gradient(25deg, rgb(92, 212, 255) 22%, rgb(245, 104, 255) 100%);
 }
 
 #project-title-nbabot {
@@ -80,6 +82,8 @@ a:hover {
     border-radius: 5px;
     display: inline;
     margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #project-title-formum {
@@ -92,9 +96,19 @@ a:hover {
 }
 
 #project-title-nflbot {
-    border-radius: 5px;
-    font-family: "Syne-ExtraBold";
+    font-family: "Syne-Bold" !important;
+    font-size: 30px;
     border-bottom: 5px double #D50A0A;
+    /*border-top: 5px double black;
+    border-right: 5px double black; 
+    border-left: 5px double black;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    display: inline;
+    margin-bottom: 5px;
+    /*background-color: black;
+    color: white;*/
 }
 
 .content {
