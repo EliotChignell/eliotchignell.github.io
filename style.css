@@ -35,10 +35,18 @@
 
 body {
     font-family: "Syne-Regular";
+    width: clamp(390px, 60%, 10000px);
+    /*margin-left: clamp(15px, 15%, 500px);
+    margin-right: clamp(15px, 15%, 500px);*/
+    margin:0 auto;
 }
 
 p {
     font-size: 17px;
+}
+
+.header {
+    text-align: right;
 }
 
 h1 {
@@ -58,7 +66,8 @@ background: linear-gradient(42deg, rgba(255,55,55,1) 22%, rgba(249,166,42,1) 100
 
 h2 {
     font-family: "Syne-SemiBold";
-    font-size: 30px;
+    font-size: 35px;
+    margin-bottom: 0;
 }
 
 .button {
@@ -86,9 +95,18 @@ background: linear-gradient(20deg, rgba(241,115,115,1) 27%, rgba(251,194,71,1) 1
     border-bottom: 5px solid #5865F2;
     border-radius: 5px;
     display: inline;
-    margin-bottom: 5px;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+#basketballbot-logo, #nflbot-logo {
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    top: 15px;  
+    margin-right: 10px;
+    border: 5px solid black;
+    border-radius: 10px; 
 }
 
 #project-title-formum {
