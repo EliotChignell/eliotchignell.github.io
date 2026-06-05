@@ -1,6 +1,10 @@
 markdown: kramdown
 highlighter: rouge
 
+default_banner_image: /assets/photos/pakiri.png
+default_banner_alt: View across Pakiri Beach
+default_banner_caption: Pakiri, New Zealand
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge

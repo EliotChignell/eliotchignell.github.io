@@ -29,6 +29,23 @@
         </header>
 
         <main>
+            {% assign has_custom_banner = page.banner_image %}
+            {% assign banner_image = page.banner_image | default: site.default_banner_image | default: "/assets/photos/pakiri.png" %}
+            {% if has_custom_banner %}
+                {% assign banner_alt = page.banner_alt | default: page.title | default: "Banner image" %}
+                {% assign banner_caption = page.banner_caption %}
+            {% else %}
+                {% assign banner_alt = page.banner_alt | default: site.default_banner_alt | default: "Banner image" %}
+                {% assign banner_caption = page.banner_caption | default: site.default_banner_caption %}
+            {% endif %}
+
+            <figure class="banner-photo">
+                <img src="{{ banner_image | relative_url }}" alt="{{ banner_alt | escape }}">
+                {% if banner_caption %}
+                    <figcaption>{{ banner_caption | escape }}</figcaption>
+                {% endif %}
+            </figure>
+            
             {{ content }}
         </main>
     </body>
