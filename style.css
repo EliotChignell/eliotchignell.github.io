@@ -1,161 +1,53 @@
-@font-face {
-    src: url("./fonts/Syne-Regular.ttf");
-    font-family: "Syne-Regular";
-}
-
-@font-face {
-    src: url("./fonts/Syne-SemiBold.ttf");
-    font-family: "Syne-SemiBold";
-}
-
-@font-face {
-    src: url("./fonts/Syne-Bold.ttf");
-    font-family: "Syne-Bold";
-}
-
-@font-face {
-    src: url("./fonts/Syne-ExtraBold.ttf");
-    font-family: "Syne-ExtraBold";
-}
-
-@font-face {
-    src: url("./fonts/Poppins-Bold.ttf");
-    font-family: "Poppins-Bold";
-}
-
-@font-face {
-    src: url("./fonts/SFCompactDisplay-Medium.ttf");
-    font-family: "SFCompactDisplay";
-}
-
-@font-face {
-    src: url("./fonts/Righteous-Regular.ttf");
-    font-family: "Righteous-Regular";
-}
-
 body {
-    font-family: "Syne-Regular";
-    width: clamp(390px, 60%, 10000px);
-    /*margin-left: clamp(15px, 15%, 500px);
-    margin-right: clamp(15px, 15%, 500px);*/
-    margin:0 auto;
+    margin: 0;
+    font-family: "Geom", serif;
+}
+
+.container {
+    width: min(100% - 2rem, 64rem);
+    margin: 0 auto;
+}
+
+.site-title {
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
 }
 
 p {
-    font-size: 17px;
+    font-family: "Platypi";
 }
 
-.header {
-    text-align: right;
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    font-family: "Platypi";
 }
 
-h1 {
-    border-bottom: 5px solid black;
-    border-radius: 5px;
-    font-family: "Syne-Bold";
-    text-align: left;
-    font-size: 35px;
-    padding-left: 15px;
-    /*background: rgb(241,115,115);
-background: linear-gradient(42deg, rgba(241,115,115,1) 27%, rgba(251,194,71,1) 100%);
-background: rgb(255,55,55);
-background: linear-gradient(42deg, rgba(255,55,55,1) 22%, rgba(249,166,42,1) 100%);*/
-    background: rgb(255,130,130);
-    background: linear-gradient(86deg, rgba(255,130,130,1) 22%, rgba(255,206,134,1) 100%);
-}
+@media (max-width: 350px) {
+    header .container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 
-h2 {
-    font-family: "Syne-SemiBold";
-    font-size: 35px;
-    margin-bottom: 0;
-}
-
-.button {
-    text-decoration: none;
-    color: black;
-    border: 5px solid black;
-    margin-right: 5px;
-    border-radius: 5px;
-    padding: 5px;
-    background: rgb(255,130,130);
-    background: linear-gradient(19deg, rgba(255,130,130,1) 22%, rgb(255, 188, 87) 100%);
-    /*background: rgb(241,115,115);
-background: linear-gradient(20deg, rgba(241,115,115,1) 27%, rgba(251,194,71,1) 100%);*/
-}
-
-.button:hover {
-    background: rgb(208, 54, 54);
-    background: linear-gradient(25deg, rgb(92, 212, 255) 22%, rgb(245, 104, 255) 100%);
-}
-
-#project-title-nbabot {
-    font-family: "Poppins-Bold" !important;
-    font-size: 30px;
-    border-top: 5px solid #ED4245;
-    border-bottom: 5px solid #5865F2;
-    border-radius: 5px;
-    display: inline;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-#basketballbot-logo, #nflbot-logo {
-    width: 50px;
-    display: inline-block;
-    position: relative;
-    top: 15px;  
-    margin-right: 10px;
-    border: 5px solid black;
-    border-radius: 10px; 
-}
-
-#project-title-formum {
-    font-family: "SFCompactDisplay";
-    background-color: #87CEFA;
-    display: inline;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-#project-title-nflbot {
-    font-family: "Syne-Bold" !important;
-    font-size: 30px;
-    border-bottom: 5px double #D50A0A;
-    /*border-top: 5px double black;
-    border-right: 5px double black; 
-    border-left: 5px double black;*/
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 5px;
-    display: inline;
-    margin-bottom: 5px;
-    /*background-color: black;
-    color: white;*/
-}
-
-#project-title-pongping {
-    font-family: "Righteous-Regular";
-    border-right: 5px solid rgb(68, 157, 209);
-    border-left: 5px solid rgb(68, 157, 209);
-    padding-left: 5px;
-    padding-right: 5px;
-    display: inline;
-    color: rgb(230, 52, 98);
-    font-size: 32px;
-}
-
-.content {
-    margin-left: 3vw;
-}
-
-.project {
-    margin-left: 5vw;
-    border-left: 5px solid black;
-    border-radius: 5px;
-    padding-left: 8px;
-    padding-bottom: 2px;
-}
-
-.header {
+    nav {
+        width: 100%;
+    }
 }
