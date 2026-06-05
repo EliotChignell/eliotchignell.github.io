@@ -16,6 +16,10 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
+section {
+    margin-bottom: 3rem;
+}
+
 nav {
     display: flex;
     gap: 1rem;
@@ -24,7 +28,7 @@ nav {
 
 header {
     background-color: #ccf;
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid black;
 }
 
 a {
@@ -39,6 +43,14 @@ a:focus-visible {
 
 p {
     font-family: "Platypi";
+}
+
+.banner-photo img {
+    display: block;
+    width: 100%;
+    height: 16rem;
+    /*margin-top: 2rem;*/
+    object-fit: cover;
 }
 
 .main-photo {
