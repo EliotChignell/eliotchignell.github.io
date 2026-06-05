@@ -52,6 +52,129 @@ p {
     font-family: "Platypi";
 }
 
+code,
+pre {
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+code {
+    background-color: #f3f3f3;
+    border-radius: 0.2rem;
+    padding: 0.1rem 0.25rem;
+    font-size: 0.92em;
+}
+
+.highlight {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.35rem;
+    background-color: #f8f8f8;
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 1rem;
+    line-height: 1.55;
+}
+
+.highlight code {
+    background: none;
+    padding: 0;
+    font-size: 0.95rem;
+}
+
+.highlight .c,
+.highlight .cm,
+.highlight .cp,
+.highlight .c1,
+.highlight .cs {
+    color: #6a737d;
+}
+
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+    color: #005cc5;
+}
+
+.highlight .s,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .s1 {
+    color: #032f62;
+}
+
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+    color: #005cc5;
+}
+
+.highlight .na,
+.highlight .nb,
+.highlight .nc,
+.highlight .no,
+.highlight .nd,
+.highlight .ni,
+.highlight .ne,
+.highlight .nf,
+.highlight .nl,
+.highlight .nn,
+.highlight .nt,
+.highlight .nv {
+    color: #6f42c1;
+}
+
+.highlight .o,
+.highlight .ow {
+    color: #d73a49;
+}
+
+.post,
+.post-list {
+    margin-top: 3rem;
+}
+
+.post {
+    max-width: 42rem;
+}
+
+.post-meta {
+    margin-bottom: 0.25rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.post h1,
+.post-list h2 {
+    margin-top: 0;
+}
+
+.post-list article {
+    border-bottom: 1px solid #ddd;
+    padding: 1.5rem 0;
+}
+
+.post-list article:first-child {
+    padding-top: 0;
+}
+
 .banner-photo {
     position: relative;
     margin: 0;
