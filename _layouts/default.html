@@ -30,7 +30,7 @@
 
         <main>
             {% assign has_custom_banner = page.banner_image %}
-            {% assign banner_image = page.banner_image | default: site.default_banner_image | default: "/assets/photos/pakiri.png" %}
+            {% assign banner_image = page.banner_image | default: site.default_banner_image | default: "/assets/photos/pakiri.jpg" %}
             {% if has_custom_banner %}
                 {% assign banner_alt = page.banner_alt | default: page.title | default: "Banner image" %}
                 {% assign banner_caption = page.banner_caption %}
