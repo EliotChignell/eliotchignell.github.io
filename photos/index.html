@@ -1,9 +1,7 @@
 ---
 layout: default
 title: Photos
-banner_image: /assets/photos/sydney.jpg
-banner_alt: View from Taronga Zoo
-banner_caption: Sydney, Australia
+banner_photo: sydney
 ---
 
 <section class="container photos-page">
@@ -11,7 +9,8 @@ banner_caption: Sydney, Australia
     <p>A small collection of places I have been.</p>
 
     <div class="photo-grid">
-        {% for photo in site.data.photos %}
+        {% assign gallery_photos = site.data.photos | where: "gallery", true %}
+        {% for photo in gallery_photos %}
         <figure class="photo-card">
             <button
                 class="photo-trigger"

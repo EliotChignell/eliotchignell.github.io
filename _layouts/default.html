@@ -29,22 +29,20 @@
         </header>
 
         <main>
-            {% assign has_custom_banner = page.banner_image %}
-            {% assign banner_image = page.banner_image | default: site.default_banner_image | default: "/assets/photos/pakiri.jpg" %}
-            {% if has_custom_banner %}
-                {% assign banner_alt = page.banner_alt | default: page.title | default: "Banner image" %}
-                {% assign banner_caption = page.banner_caption %}
-            {% else %}
-                {% assign banner_alt = page.banner_alt | default: site.default_banner_alt | default: "Banner image" %}
-                {% assign banner_caption = page.banner_caption | default: site.default_banner_caption %}
-            {% endif %}
+            {% assign banner_photo_id = page.banner_photo | default: site.default_banner_photo | default: "pakiri" %}
+            {% assign banner_photo = site.data.photos | where: "id", banner_photo_id | first %}
+            {% unless banner_photo %}
+                {% assign banner_photo = site.data.photos | where: "id", "pakiri" | first %}
+            {% endunless %}
 
+            {% if banner_photo %}
             <figure class="banner-photo">
-                <img src="{{ banner_image | relative_url }}" alt="{{ banner_alt | escape }}">
-                {% if banner_caption %}
-                    <figcaption>{{ banner_caption | escape }}</figcaption>
+                <img src="{{ banner_photo.image | relative_url }}" alt="{{ banner_photo.alt | escape }}">
+                {% if banner_photo.caption %}
+                    <figcaption>{{ banner_photo.caption | escape }}</figcaption>
                 {% endif %}
             </figure>
+            {% endif %}
             
             {{ content }}
         </main>

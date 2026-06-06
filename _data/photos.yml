@@ -1,15 +1,54 @@
-- image: /assets/photos/bondi.jpg
+- id: bondi
+  image: /assets/photos/bondi.jpg
   alt: Bondi Beach on a sunny afternoon
   caption: Bondi Beach, Australia
+  description: Bondi Beach on a stunning December afternoon
+  gallery: true
 
-- image: /assets/photos/bratislava.jpg
+- id: bondi2
+  image: /assets/photos/bondi2.jpg
+  alt: Some foliage in the Bondi to Coogee walk
+  caption: Bondi to Coogee, Australia
+  gallery: true
+
+- id: bratislava
+  image: /assets/photos/bratislava.jpg
   alt: View across Bratislava
   caption: Bratislava, Slovakia
+  gallery: true
 
-- image: /assets/photos/mteden.jpg
+- id: mteden
+  image: /assets/photos/mteden.jpg
   alt: View from Mount Eden
   caption: Mount Eden, Auckland
+  gallery: true
 
-- image: /assets/photos/pakiri.jpg
+- id: pakiri
+  image: /assets/photos/pakiri.jpg
   alt: View across Pakiri Beach
   caption: Pakiri, New Zealand
+  gallery: true
+
+- id: sydney
+  image: /assets/photos/sydney.jpg
+  alt: View from Taronga Zoo
+  caption: Sydney, Australia
+  gallery: true
+
+- id: goldengate
+  image: /assets/photos/goldengate.jpg
+  alt: View of the Golden Gate Bridge
+  caption: San Francisco, United States
+  gallery: true
+
+- id: milford
+  image: /assets/photos/milford.jpg
+  alt: View of Milford Sound
+  caption: Milford Sound, New Zealand
+  gallery: true
+
+- id: sunset
+  image: /assets/photos/sunset.jpg
+  alt: A sunset in Auckland
+  caption: Auckland, New Zealand
+  gallery: true

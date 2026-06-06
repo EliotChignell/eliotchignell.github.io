@@ -1,83 +1,50 @@
-<!doctype html>
+---
+layout: default
+banner_photo: mteden
+---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<section>
+    <div class="container">
+        <h1>🌏 Kia ora!</h1>
+        <p>
+            I am a <b>software engineer</b> based in Auckland, New Zealand 🇳🇿.
+        </p>
 
-        <title>Eliot Chignell</title>
-        <meta name="description" content="Personal website for Eliot Chignell">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-            
-        <link rel="stylesheet" href="style.css">
-    </head>
+        <p>
+            Between university and work, some things I care about are:
+        </p>
 
-    <body>
-        <header>
-            <div class="container">
-                <a class="site-title" href="/">Eliot Chignell</a>
+        <ul>
+            <li>
+                All things sports
+                <ul>
+                    <li>I'm a massive fan of the <b>Phoenix Suns</b> and <b>Arizona Diamondbacks 🏜️</b></li>
+                    <li>I also follow F1, rugby, cricket, and anything else that's on</li>
+                </ul>
+            </li>
+            <li>
+                Travelling
+                <ul>
+                    <li>I have lived in the Netherlands and also visited the UK, Czechia, Slovakia, Austria and Australia</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
 
-                <nav>
-                    <a href="/blog/">Blog</a>
-                    <a href="/photos/">Photos</a>
-                    <a href="/contact/">Contact</a>
-                </nav>
-            </div>
-        </header>
-        
-        <main>
-            <figure class="banner-photo">
-                <img src="/assets/photos/mteden.jpg" alt="View from Mount Eden">
-                <figcaption>Mount Eden, Auckland</figcaption>
-            </figure>
-            
-            <section>
-                <div class="container">
-                    <h1>🌏 Kia ora!</h1>
-                    <p>
-                        I am a <b>software engineer</b> based in Auckland, New Zealand 🇳🇿. 
-                    </p>
+<section>
+    <div class="container">
+        <h1>📚 About this website</h1>
+        <p>This is a space for showcasing some of my past experience and projects, as well as various thoughts and photos. I've had a personal website since 2018, but I felt it was well overdue for a refresh.</p>
 
-                    <p>
-                        Between university and work, some things I care about are:
-                    </p>
-                    
-                    <ul>
-                        <li>
-                            All things sports
-                            <ul>
-                                <li>I'm a massive fan of the <b>Phoenix Suns</b> and <b>Arizona Diamondbacks 🏜️</b></li>
-                                <li>I also follow F1, rugby, cricket, and anything else that's on</li>
-                            </ul>
-                        </li>
-                        <li>
-                            Travelling
-                            <ul>
-                                <li>I have lived in the Netherlands and also visited the UK, Czechia, Slovakia, Austria and Australia</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+        <p>This site itself is just vanilla HTML/CSS hosted on GitHub pages, with some inspiration taken from <a href="https://ericzheng.nz">ericzheng.nz</a>. Feel free to check out the source code <a href="https://github.com/EliotChignell/eliotchignell.github.io">here</a>.</p>
 
-            <section>
-                <div class="container">
-                    <h1>📚 About this website</h1>
-                    <p>This is a space for showcasing some of my past experience and projects, as well as various thoughts and photos. I've had a personal website since 2018, but I felt it was well overdue for a refresh.</p>
+        <br>
 
-                    <p>This site itself is just vanilla HTML/CSS hosted on GitHub pages, with some inspiration taken from <a href="https://ericzheng.nz">ericzheng.nz</a>. Feel free to check out the source code <a href="https://github.com/EliotChignell/eliotchignell.github.io">here</a>.</p>
-                    
-                    <br>
-
-                    <div class="main-photo">
-                        <img src="./assets/photos/bondi.jpg">
-                        <p>Bondi Beach on a stunning December afternoon</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </body>
-</html>
+        {% assign bondi_photo = site.data.photos | where: "id", "bondi" | first %}
+        <div class="main-photo">
+            <img src="{{ bondi_photo.image | relative_url }}" alt="{{ bondi_photo.alt | escape }}">
+            <p>{{ bondi_photo.description | default: bondi_photo.caption }}</p>
+        </div>
+    </div>
+</section>
