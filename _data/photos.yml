@@ -1,0 +1,15 @@
+- image: /assets/photos/bondi.jpg
+  alt: Bondi Beach on a sunny afternoon
+  caption: Bondi Beach, Australia
+
+- image: /assets/photos/bratislava.jpg
+  alt: View across Bratislava
+  caption: Bratislava, Slovakia
+
+- image: /assets/photos/mteden.jpg
+  alt: View from Mount Eden
+  caption: Mount Eden, Auckland
+
+- image: /assets/photos/pakiri.jpg
+  alt: View across Pakiri Beach
+  caption: Pakiri, New Zealand

@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Photos
-banner_image: /assets/photos/mteden.jpg
-banner_alt: View from Mount Eden
-banner_caption: Mount Eden, Auckland
+banner_image: /assets/photos/sydney.jpg
+banner_alt: View from Taronga Zoo
+banner_caption: Sydney, Australia
 ---
 
 <section class="container photos-page">
@@ -11,33 +11,20 @@ banner_caption: Mount Eden, Auckland
     <p>A small collection of places I have been.</p>
 
     <div class="photo-grid">
+        {% for photo in site.data.photos %}
         <figure class="photo-card">
-            <button class="photo-trigger" type="button" data-full="/assets/photos/bondi.jpg" data-alt="Bondi Beach on a sunny afternoon" data-caption="Bondi Beach, Australia">
-                <img src="/assets/photos/bondi.jpg" alt="Bondi Beach on a sunny afternoon">
+            <button
+                class="photo-trigger"
+                type="button"
+                data-full="{{ photo.image | relative_url }}"
+                data-alt="{{ photo.alt | escape }}"
+                data-caption="{{ photo.caption | escape }}"
+            >
+                <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt | escape }}">
             </button>
-            <figcaption>Bondi Beach, Australia</figcaption>
+            <figcaption>{{ photo.caption }}</figcaption>
         </figure>
-
-        <figure class="photo-card">
-            <button class="photo-trigger" type="button" data-full="/assets/photos/bratislava.jpg" data-alt="View across Bratislava" data-caption="Bratislava, Slovakia">
-                <img src="/assets/photos/bratislava.jpg" alt="View across Bratislava">
-            </button>
-            <figcaption>Bratislava, Slovakia</figcaption>
-        </figure>
-
-        <figure class="photo-card">
-            <button class="photo-trigger" type="button" data-full="/assets/photos/mteden.jpg" data-alt="View from Mount Eden" data-caption="Mount Eden, Auckland">
-                <img src="/assets/photos/mteden.jpg" alt="View from Mount Eden">
-            </button>
-            <figcaption>Mount Eden, Auckland</figcaption>
-        </figure>
-
-        <figure class="photo-card">
-            <button class="photo-trigger" type="button" data-full="/assets/photos/pakiri.jpg" data-alt="View across Pakiri Beach" data-caption="Pakiri, New Zealand">
-                <img src="/assets/photos/pakiri.jpg" alt="View across Pakiri Beach">
-            </button>
-            <figcaption>Pakiri, New Zealand</figcaption>
-        </figure>
+        {% endfor %}
     </div>
 
     <dialog class="photo-dialog" data-photo-dialog aria-label="Expanded photo">
