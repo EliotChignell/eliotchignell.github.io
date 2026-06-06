@@ -217,6 +217,125 @@ code {
     height: auto;
 }
 
+.photos-page {
+    margin-top: 3rem;
+}
+
+.photos-page > p {
+    max-width: 38rem;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.photo-card {
+    margin: 0;
+}
+
+.photo-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    cursor: zoom-in;
+}
+
+.photo-trigger:focus-visible {
+    outline: 3px solid #111;
+    outline-offset: 0.25rem;
+}
+
+.photo-card img,
+.photo-dialog img {
+    display: block;
+}
+
+.photo-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.photo-card figcaption {
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.photo-dialog {
+    width: min(100% - 2rem, 76rem);
+    max-height: calc(100% - 2rem);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: white;
+}
+
+.photo-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+.photo-dialog img {
+    max-width: 100%;
+    max-height: calc(100vh - 9rem);
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.photo-dialog p {
+    margin: 0.75rem 3rem 0;
+    text-align: center;
+}
+
+.photo-dialog-close {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0 0.75rem auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 0;
+}
+
+.photo-dialog-close::before,
+.photo-dialog-close::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.15rem;
+    height: 0.125rem;
+    background-color: white;
+    content: "";
+    transform-origin: center;
+}
+
+.photo-dialog-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.photo-dialog-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.photo-dialog-close:focus-visible {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
 header .container {
     display: flex;
     align-items: center;

@@ -1,0 +1,79 @@
+---
+layout: default
+title: Photos
+banner_image: /assets/photos/mteden.jpg
+banner_alt: View from Mount Eden
+banner_caption: Mount Eden, Auckland
+---
+
+<section class="container photos-page">
+    <h1>Photos</h1>
+    <p>A small collection of places I have been.</p>
+
+    <div class="photo-grid">
+        <figure class="photo-card">
+            <button class="photo-trigger" type="button" data-full="/assets/photos/bondi.jpg" data-alt="Bondi Beach on a sunny afternoon" data-caption="Bondi Beach, Australia">
+                <img src="/assets/photos/bondi.jpg" alt="Bondi Beach on a sunny afternoon">
+            </button>
+            <figcaption>Bondi Beach, Australia</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+            <button class="photo-trigger" type="button" data-full="/assets/photos/bratislava.jpg" data-alt="View across Bratislava" data-caption="Bratislava, Slovakia">
+                <img src="/assets/photos/bratislava.jpg" alt="View across Bratislava">
+            </button>
+            <figcaption>Bratislava, Slovakia</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+            <button class="photo-trigger" type="button" data-full="/assets/photos/mteden.jpg" data-alt="View from Mount Eden" data-caption="Mount Eden, Auckland">
+                <img src="/assets/photos/mteden.jpg" alt="View from Mount Eden">
+            </button>
+            <figcaption>Mount Eden, Auckland</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+            <button class="photo-trigger" type="button" data-full="/assets/photos/pakiri.jpg" data-alt="View across Pakiri Beach" data-caption="Pakiri, New Zealand">
+                <img src="/assets/photos/pakiri.jpg" alt="View across Pakiri Beach">
+            </button>
+            <figcaption>Pakiri, New Zealand</figcaption>
+        </figure>
+    </div>
+
+    <dialog class="photo-dialog" data-photo-dialog aria-label="Expanded photo">
+        <button class="photo-dialog-close" type="button" aria-label="Close expanded photo"></button>
+        <img data-photo-dialog-image alt="">
+        <p data-photo-dialog-caption></p>
+    </dialog>
+</section>
+
+<script>
+    const photoDialog = document.querySelector("[data-photo-dialog]");
+    const photoDialogImage = document.querySelector("[data-photo-dialog-image]");
+    const photoDialogCaption = document.querySelector("[data-photo-dialog-caption]");
+    const photoDialogClose = document.querySelector(".photo-dialog-close");
+
+    document.querySelectorAll(".photo-trigger").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+            photoDialogImage.src = trigger.dataset.full;
+            photoDialogImage.alt = trigger.dataset.alt;
+            photoDialogCaption.textContent = trigger.dataset.caption;
+
+            if (typeof photoDialog.showModal === "function") {
+                photoDialog.showModal();
+            } else {
+                photoDialog.setAttribute("open", "");
+            }
+        });
+    });
+
+    photoDialogClose.addEventListener("click", () => {
+        photoDialog.close();
+    });
+
+    photoDialog.addEventListener("click", (event) => {
+        if (event.target === photoDialog) {
+            photoDialog.close();
+        }
+    });
+</script>
