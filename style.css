@@ -234,11 +234,13 @@ code {
 
 .photo-card {
     margin: 0;
+    min-width: 0;
 }
 
 .photo-trigger {
     display: block;
     width: 100%;
+    min-width: 0;
     padding: 0;
     border: 0;
     background: none;
@@ -258,6 +260,8 @@ code {
 
 .photo-card img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
